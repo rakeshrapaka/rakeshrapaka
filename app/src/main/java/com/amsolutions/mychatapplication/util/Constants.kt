@@ -1,4 +1,4 @@
-package util
+package com.amsolutions.mychatapplication.util
 
 class Constants {
      val API_KEY = "d095243a2b247acc177552dd2d46517b0a3002f5"

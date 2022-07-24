@@ -1,8 +1,8 @@
-package data.local
+package com.amsolutions.mychatapplication.data.local
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import data.model.User
+import com.amsolutions.mychatapplication.data.model.User
 
 @Dao
 interface UserDao {

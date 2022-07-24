@@ -1,11 +1,11 @@
-package data.repository
+package com.amsolutions.mychatapplication.data.repository
 
 import android.app.Application
 import androidx.lifecycle.LiveData
-import data.local.ChatDatabase
-import data.local.GroupsDao
-import data.model.Groups
-import util.subscribeOnBackground
+import com.amsolutions.mychatapplication.data.local.ChatDatabase
+import com.amsolutions.mychatapplication.data.local.GroupsDao
+import com.amsolutions.mychatapplication.data.model.Groups
+import com.amsolutions.mychatapplication.util.subscribeOnBackground
 
 class GroupsRepository (application: Application) {
     private  var groupDao: GroupsDao

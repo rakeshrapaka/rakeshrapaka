@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.DiffUtil.DiffResult.NO_POSITION
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.amsolutions.mychatapplication.R
-import data.model.User
+import com.amsolutions.mychatapplication.data.model.User
 
 class UserAdapter (private val onItemClickListener: (User) -> Unit)
     : ListAdapter<User, UserAdapter.UserHolder>(diffCallback) {

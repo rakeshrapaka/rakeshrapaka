@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyChat">
         <activity
-            android:name=".user.AadEditUserActivity"
+            android:name="com.amsolutions.mychatapplication.user.AadEditUserActivity"
             android:exported="false" />
         <activity
             android:name=".SingupActivity"

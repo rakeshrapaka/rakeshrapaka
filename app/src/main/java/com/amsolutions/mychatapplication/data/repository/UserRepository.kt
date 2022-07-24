@@ -1,11 +1,11 @@
-package data.repository
+package com.amsolutions.mychatapplication.data.repository
 
 import android.app.Application
 import androidx.lifecycle.LiveData
-import data.local.ChatDatabase
-import data.local.UserDao
-import data.model.User
-import util.subscribeOnBackground
+import com.amsolutions.mychatapplication.data.local.ChatDatabase
+import com.amsolutions.mychatapplication.data.local.UserDao
+import com.amsolutions.mychatapplication.data.model.User
+import com.amsolutions.mychatapplication.util.subscribeOnBackground
 
 class UserRepository(application: Application) {
     private  var userDao: UserDao

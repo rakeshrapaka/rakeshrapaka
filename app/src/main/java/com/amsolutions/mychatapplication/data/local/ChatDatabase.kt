@@ -1,13 +1,13 @@
-package data.local
+package com.amsolutions.mychatapplication.data.local
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
-import data.model.Groups
-import data.model.User
-import util.subscribeOnBackground
+import com.amsolutions.mychatapplication.data.model.Groups
+import com.amsolutions.mychatapplication.data.model.User
+import com.amsolutions.mychatapplication.util.subscribeOnBackground
 
 @Database(entities = [User::class,Groups::class], version = 1)
 abstract class ChatDatabase : RoomDatabase() {
