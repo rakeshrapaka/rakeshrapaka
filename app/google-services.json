@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1070473648373",
+    "project_id": "my-chat-a038f",
+    "storage_bucket": "my-chat-a038f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070473648373:android:cc97ac3a243015e0e84dbc",
+        "android_client_info": {
+          "package_name": "com.amsolutions.mychatapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1070473648373-vo3c3rk74tgn1g88nfa8u56evs4p03gt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3vo3knxOx2MWarT6zOs1e7nscahVwPgo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1070473648373-vo3c3rk74tgn1g88nfa8u56evs4p03gt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
