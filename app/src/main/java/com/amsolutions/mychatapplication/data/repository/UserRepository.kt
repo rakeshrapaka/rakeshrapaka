@@ -36,10 +36,19 @@ class UserRepository(application: Application) {
         }
     }
 
+    fun deleteAllUsers() {
+        subscribeOnBackground {
+            userDao.deleteAllUser()
+        }
+    }
+
     fun getAllUsers(): LiveData<List<User>> {
         return allUsers
     }
 
+    fun getAllUsersForGroup(): List<User>{
+        return userDao.getAllUsersForGroupCreation()
+    }
 
 
 }

@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
 
@@ -14,9 +16,13 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var btnSubmit: Button
     private lateinit var btnSignUp: Button
 
+    private lateinit var mAuth : FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        mAuth = FirebaseAuth.getInstance()
 
         editUserName = findViewById(R.id.usernameTxt)
         editPassword = findViewById(R.id.passwordTxt)
@@ -28,5 +34,27 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btnSubmit.setOnClickListener{
+            val email = editUserName.text.toString()
+            val password = editPassword.text.toString()
+
+            login(email,password)
+        }
+
+    }
+
+    private fun login(email:String,password:String){
+        mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener{
+            task ->
+            if(task.isSuccessful){
+                val user = mAuth.currentUser?.uid
+                var mainIntent = Intent(this,MainActivity::class.java)
+                mainIntent.putExtra("UserID",user)
+                startActivity(mainIntent)
+                finish()
+            }else{
+                Toast.makeText(this,"User Does not exist ",Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 }

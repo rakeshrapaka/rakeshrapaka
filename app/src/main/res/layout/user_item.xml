@@ -30,6 +30,15 @@
             android:layout_below="@id/text_view_name"
             tools:text="Mobile Num" />
 
+        <CheckBox
+            android:id="@+id/selectedUser"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

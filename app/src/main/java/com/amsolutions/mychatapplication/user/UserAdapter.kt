@@ -24,7 +24,7 @@ class UserAdapter (private val onItemClickListener: (User) -> Unit)
     override fun onBindViewHolder(holder: UserHolder, position: Int) {
         with(getItem(position)) {
             holder.tvName.text = name
-            holder.tvMobileNumber.text = mobileNum.toString()
+            holder.tvMobileNumber.text = email
         }
     }
 
@@ -51,5 +51,5 @@ private val diffCallback = object : DiffUtil.ItemCallback<User>() {
 
     override fun areContentsTheSame(oldItem: User, newItem: User) =
         oldItem.name == newItem.name
-                && oldItem.mobileNum == newItem.mobileNum
+                && oldItem.email == newItem.email
 }

@@ -18,6 +18,12 @@ interface UserDao {
     @Query("delete from user_table where id = :id")
     fun deleteUser(id:Int)
 
+    @Query("delete from user_table ")
+    fun deleteAllUser()
+
     @Query("select * from user_table order by id")
     fun getAllUsers(): LiveData<List<User>>
+
+    @Query("select * from user_table order by id")
+    fun getAllUsersForGroupCreation(): List<User>
 }

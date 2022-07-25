@@ -1,9 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.amsolutions.mychatapplication.user.AadEditUserActivity">
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".user.AadEditUserActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/logoTxt"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="My Chat - Edit/Add User"
+        android:textStyle="bold"
+        android:textSize="24sp"/>
+
+    <EditText
+        android:id="@+id/et_uname"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="10dp"
+        android:hint="name"
+        android:layout_margin="10dp"
+        android:background="@drawable/edit_bg"
+        android:inputType="text"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/et_mail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="10dp"
+        android:hint="email "
+        android:layout_margin="10dp"
+        android:background="@drawable/edit_bg"
+        android:inputType="textMultiLine"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Save"/>
+
+</LinearLayout>

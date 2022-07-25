@@ -10,7 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyChat">
         <activity
-            android:name="com.amsolutions.mychatapplication.user.AadEditUserActivity"
+            android:name=".chat.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user.UserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user.AadEditUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".groups.GroupsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".groups.AadEditGroupActivity"
             android:exported="false" />
         <activity
             android:name=".SingupActivity"
@@ -26,7 +38,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
     </application>
 
 </manifest>

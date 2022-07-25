@@ -5,17 +5,20 @@ import androidx.lifecycle.LiveData
 import com.amsolutions.mychatapplication.data.local.ChatDatabase
 import com.amsolutions.mychatapplication.data.local.GroupsDao
 import com.amsolutions.mychatapplication.data.model.Groups
+import com.amsolutions.mychatapplication.data.model.User
 import com.amsolutions.mychatapplication.util.subscribeOnBackground
 
 class GroupsRepository (application: Application) {
     private  var groupDao: GroupsDao
     private  var allGroups: LiveData<List<Groups>>
+    private  var allUsers: LiveData<List<User>>
 
     private val database = ChatDatabase.getInstance(application)
 
     init {
         groupDao = database.groupsDao()
         allGroups = groupDao.getAllGroups()
+        allUsers = groupDao.getAllUsersForGroupCreation()
     }
 
     fun insert(group: Groups) {
@@ -30,16 +33,25 @@ class GroupsRepository (application: Application) {
         }
     }
 
-    fun deleteUser(id:Int) {
+    fun deleteGroup(id:Int) {
         subscribeOnBackground {
             groupDao.deleteGroup(id)
         }
     }
 
-    fun getAllUsers(): LiveData<List<Groups>> {
+    fun deleteAllGroups() {
+        subscribeOnBackground {
+            groupDao.deleteAllGroups()
+        }
+    }
+
+    fun getAllGroups(): LiveData<List<Groups>> {
         return allGroups
     }
 
+    fun getAllUsers(): LiveData<List<User>> {
+        return allUsers
+    }
 
 
 }
